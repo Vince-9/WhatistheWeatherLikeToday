@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
     </script>
     <title>What's the weather Like Today</title>
     <style>
@@ -216,7 +216,7 @@
         var interval = setInterval(function () {
             if (cityName != undefined && cityName != "") {
                 $.ajax({
-                    url: "//v.juhe.cn/weather/index?format=2&cityname=" + decodeURI(cityName) + "&key=ba8ecd78f9fe6a9121bd02e068133414",
+                    url: "https://v.juhe.cn/weather/index?format=2&cityname=" + decodeURI(cityName) + "&key=ba8ecd78f9fe6a9121bd02e068133414",
                     type: "GET",
                     dataType: "jsonp",
                     success: function (data) {
@@ -254,6 +254,9 @@
                 theBody.style.backgroundSize = "100% 100%";
                 //theBody.style.backgroundRepeat = "repeat-y";
                 theBody.style.backgroundAttachment = "fixed";
+                if(bgIndex==1){
+                    theBody.style.backgroundSize = "100% auto";
+                }
                 clearInterval(bgInterval);
             }
         }, 100);
@@ -356,6 +359,9 @@
                 bgIndex = 0;
                 return false;
             }
+            // if (navigator.userAgent.match(/windows/i)
+            //     || navigator.userAgent.match(//)
+            // )
 
         }
         //alert(detectmob());
