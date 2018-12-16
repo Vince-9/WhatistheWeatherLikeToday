@@ -251,12 +251,10 @@
                 console.log("url=" + url);
                 var theBody = document.getElementsByTagName("body")[0];
                 theBody.style.background = url;
-                theBody.style.backgroundSize = "100% 100%";
+                theBody.style.backgroundSize = "100%";
                 //theBody.style.backgroundRepeat = "repeat-y";
                 theBody.style.backgroundAttachment = "fixed";
-                if(bgIndex==1){
-                    theBody.style.backgroundSize = "";
-                }
+
                 clearInterval(bgInterval);
             }
         }, 100);
