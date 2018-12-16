@@ -340,7 +340,6 @@
         }
 
         function detectmob() {
-            //alert(navigator.userAgent);
             if (navigator.userAgent.match(/Android/i)
                 || navigator.userAgent.match(/webOS/i)
                 || navigator.userAgent.match(/iPhone/i)
@@ -350,13 +349,11 @@
                 || navigator.userAgent.match(/Windows Phone/i)
             ) {
                 bgIndex = 1;
-                alert("It is a phone");
                 return true;
             }
 
             else {
                 bgIndex = 0;
-                alert("It is PC");
                 return false;
             }
 
